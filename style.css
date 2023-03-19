@@ -194,6 +194,7 @@ body {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -503,15 +504,18 @@ body {
     border-top: 0;
 
 }
+
 .card__title {
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: 700;
     padding-top: 20px;
 }
+
 .card__text {
     margin-bottom: 20px;
 }
+
 .card__price {
     margin-bottom: 20px;
     margin-bottom: 20px;
@@ -519,9 +523,189 @@ body {
     font-size: 24px;
 
 }
-.card__link{ 
+
+.card__link {
     display: block;
     color: #0066ff;
     border: 1px solid #0066ff;
     border-top: 0;
+}
+
+/* BURGER */
+.menu__btn {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: none;
+}
+
+.menu__btn span {
+    height: 2px;
+    background-color: white;
+    width: 100%;
+}
+
+/* BURGER END */
+
+@media (max-width:1180px) {
+    .important__list {
+        gap: 30px 20px;
+    }
+
+    .important__item-img {
+        width: 100%;
+    }
+}
+
+@media (max-width:1040px) {
+    .video__content {
+        width: 100%;
+    }
+}
+
+@media (max-width:860px) {
+    .why-lease__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .top {
+        z-index: 4;
+    }
+
+    .menu__list {
+        position: absolute;
+        background-color: #151515;
+        flex-direction: column;
+        z-index: 7;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        align-items: center;
+        height: 100vh;
+        padding-top: 220px;
+        transform: translateY(-100%);
+        transition: transform .3s ease;
+    }
+
+    .menu__list.menu__list--active {
+        transform: translateY(0%);
+    }
+
+    .important__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu__btn {
+        display: flex;
+        position: relative;
+        z-index: 10;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 10;
+    }
+
+}
+
+@media (max-width:768px) {
+    .title {
+        font-size: 70px;
+    }
+
+    .top__link {
+        max-width: 360px;
+        font-size: 28px;
+        padding: 16px;
+    }
+
+    .swiper-pagination-bullet {
+        height: 3px;
+        width: 60px;
+    }
+
+    .footer__menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .video__content {
+        height: 400px;
+    }
+}
+
+@media (max-width:540px) {
+    .title {
+        font-size: 60px
+    }
+
+    .header__inner {
+        align-items: center;
+    }
+
+    .top__link {
+        font-size: 24px;
+        max-width: 310px;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+
+    .video {
+        padding-bottom: 50px;
+    }
+
+    .video__content {
+        height: 200px;
+    }
+
+    .why-lease {
+        padding: 50px 0;
+    }
+
+    .why-lease__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .how-does {
+        padding-bottom: 50px;
+    }
+
+    .how__does-list {
+        padding: 30px 0 40px;
+    }
+
+    .how__does-item {
+        padding: 65px 0 19px 0;
+        margin-right: auto;
+    }
+
+    .how__does-item::before {
+        right: 0;
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+        font-size: 32px;
+    }
+    .important__list {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .app,
+    .copy__nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .copy__nav {
+        gap: 20px   ;
+    }
 }
