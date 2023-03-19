@@ -483,12 +483,18 @@ body {
 }
 
 
-.tabs__content-item {
+.tabs__content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 100px 40px;
     margin-bottom: 100px;
+
 }
+
+.card {
+    margin-bottom: 40px;
+}
+
 
 .card {
     text-align: center;
@@ -496,6 +502,7 @@ body {
 
 .card__img {
     display: block;
+    width: 100%;
 }
 
 .card__content {
@@ -552,6 +559,11 @@ body {
 }
 
 /* BURGER END */
+@media (max-width:1180px) {
+    .tabs__content-item {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 @media (max-width:1180px) {
     .important__list {
@@ -567,6 +579,11 @@ body {
     .video__content {
         width: 100%;
     }
+
+    .tabs__btn {
+        padding: 0 0 50px;
+        gap: 20px;
+    }
 }
 
 @media (max-width:860px) {
@@ -577,6 +594,10 @@ body {
 
     .top {
         z-index: 4;
+    }
+
+    .tabs__content {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .menu__list {
@@ -643,6 +664,48 @@ body {
     }
 }
 
+@media (max-width:650px) {
+    .tabs__content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tabs__btn-item {
+        font-size: 18px;
+    }
+    .blog__items {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .blog__item-title {
+        margin-bottom: 1px;
+    }
+    .blog__item-link {
+        margin-left: auto;
+    }
+}
+@media (max-width:600px){
+    .contacts {
+        padding: 50px 0;
+    }
+    .form__input {
+        width: 100%;
+        margin-bottom: 31px;
+    }
+    .form__textarea {
+        width: 100%;
+    }
+    .form__btn {
+        margin-bottom: 50px;
+    }
+    .container {
+        padding: 0 9px;
+    }
+    .tabs__content {
+        gap: 30px 40px  ;
+    }
+    .contacts__text {
+        padding:  0 0;
+    }
+}
 @media (max-width:540px) {
     .title {
         font-size: 60px
@@ -697,15 +760,18 @@ body {
         height: 50px;
         font-size: 32px;
     }
+
     .important__list {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
+
     .app,
     .copy__nav {
         flex-direction: column;
         align-items: center;
     }
+
     .copy__nav {
-        gap: 20px   ;
+        gap: 20px;
     }
 }
